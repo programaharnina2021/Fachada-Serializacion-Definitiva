@@ -2,9 +2,9 @@ package acceso.coleccion;
 
 import java.util.Collection;
 
-import acceso.DAOGrabador;
-import acceso.IRecuperadorUnitario;
-import acceso.RecuperadorUnitario;
+import acceso.base.DAOGrabador;
+import acceso.base.IRecuperadorUnitario;
+import acceso.base.RecuperadorUnitario;
 
 
 public class DAOCollection<T extends Collection> extends DAOGrabador<T> {

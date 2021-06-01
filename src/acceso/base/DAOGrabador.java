@@ -1,4 +1,4 @@
-package acceso;
+package acceso.base;
 
 public abstract class DAOGrabador<T> {
 	

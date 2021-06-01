@@ -35,6 +35,10 @@ public class DaoLista<T extends List, S extends Indicable<Comparable>, K> {
 		return add;
 	}
 
+	public S get(int posicion) {
+		return (S) lista.get(posicion);
+	}
+
 	public S buscar(K id) {
 		for (int i = 0; i < lista.size(); i++) {
 			S s = (S) lista.get(i);
