@@ -1,9 +1,10 @@
-package acceso.base;
+package dao.serializado;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
+import acceso.base.IRecuperadorIndexado;
 import modelo.Indicable;
 
 public class RecuperadorIndexadoSerializado<T extends Indicable, K> implements IRecuperadorIndexado<T, K> {

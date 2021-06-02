@@ -1,8 +1,10 @@
-package acceso.base;
+package dao.serializado;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+
+import acceso.base.IRecuperadorUnitario;
 
 public class RecuperadorUnitarioSerializado<T> implements IRecuperadorUnitario<T> {
 

@@ -1,8 +1,11 @@
-package acceso.base;
+package dao.serializado;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+
+import acceso.base.IGrabador;
+import acceso.base.MyObjectOutputStream;
 
 public class GrabadorSerializado<T> implements IGrabador<T> {
 	private boolean estado = false;

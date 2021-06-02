@@ -56,8 +56,8 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="acceso.base.GrabadorSerializado" project="Fachada Serializacion Definitiva" 
-    file="/Fachada Serializacion Definitiva/src/acceso/base/GrabadorSerializado.java" binary="false" 
+  <class id="7" language="java" name="dao.serializado.GrabadorSerializado" project="Fachada Serializacion Definitiva" 
+    file="/Fachada Serializacion Definitiva/src/dao/serializado/GrabadorSerializado.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="86" y="165"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -66,9 +66,9 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="acceso.base.RecuperadorIndexadoSerializado" 
+  <class id="8" language="java" name="dao.serializado.RecuperadorIndexadoSerializado" 
     project="Fachada Serializacion Definitiva" 
-    file="/Fachada Serializacion Definitiva/src/acceso/base/RecuperadorIndexadoSerializado.java" binary="false" 
+    file="/Fachada Serializacion Definitiva/src/dao/serializado/RecuperadorIndexadoSerializado.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="206" y="450"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -77,9 +77,9 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="acceso.multiobjeto.DAOMultiObjetosGenerica" 
+  <class id="9" language="java" name="dao.multiobjeto.DAOMultiObjetosGenerica" 
     project="Fachada Serializacion Definitiva" 
-    file="/Fachada Serializacion Definitiva/src/acceso/multiobjeto/DAOMultiObjetosGenerica.java" binary="false" 
+    file="/Fachada Serializacion Definitiva/src/dao/multiobjeto/DAOMultiObjetosGenerica.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="521" y="128"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -88,8 +88,8 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="acceso.base.RecuperadorIndexadoTexto" project="Fachada Serializacion Definitiva" 
-    file="/Fachada Serializacion Definitiva/src/acceso/base/RecuperadorIndexadoTexto.java" binary="false" 
+  <class id="10" language="java" name="acceso.texto.RecuperadorIndexadoTexto" project="Fachada Serializacion Definitiva" 
+    file="/Fachada Serializacion Definitiva/src/acceso/texto/RecuperadorIndexadoTexto.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="470" y="461"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -98,8 +98,8 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="acceso.base.GrabadorTexto" project="Fachada Serializacion Definitiva" 
-    file="/Fachada Serializacion Definitiva/src/acceso/base/GrabadorTexto.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="11" language="java" name="acceso.texto.GrabadorTexto" project="Fachada Serializacion Definitiva" 
+    file="/Fachada Serializacion Definitiva/src/acceso/texto/GrabadorTexto.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="53" width="108" x="219" y="127"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -107,79 +107,83 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <realization id="13">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <association id="14">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="15" name="daoArchivo"/>      
-      <multiplicity id="16" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="17">    
+  <realization id="12">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  
-  <association id="18">    
+  <association id="13">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="19" name="grabador">        
+      <attribute id="14" name="grabador">        
         <position height="0" width="0" x="19" y="6"/>      
       </attribute>      
-      <multiplicity id="20" minimum="0" maximum="1">        
+      <multiplicity id="15" minimum="0" maximum="1">        
         <position height="0" width="0" x="19" y="6"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="21">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="22" name="daoCancion"/>      
-      <multiplicity id="23" minimum="0" maximum="1"/>    
+  <association id="16">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="17" name="daoArchivo">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="24">    
+  <association id="19">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="25" name="daoArticulo">        
+      <attribute id="20" name="daoArticulo">        
         <position height="0" width="0" x="60" y="252"/>      
       </attribute>      
-      <multiplicity id="26" minimum="0" maximum="1">        
+      <multiplicity id="21" minimum="0" maximum="1">        
         <position height="0" width="0" x="60" y="252"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="27">    
+  <dependency id="22">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <realization id="23">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="24">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="25">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="28" name="recuperador">        
+      <attribute id="26" name="recuperador">        
         <position height="0" width="0" x="-61" y="-3"/>      
       </attribute>      
-      <multiplicity id="29" minimum="0" maximum="1">        
+      <multiplicity id="27" minimum="0" maximum="1">        
         <position height="0" width="0" x="-61" y="-3"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="30">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
+  <association id="28">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="29" name="daoCancion">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <realization id="31">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <realization id="32">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  

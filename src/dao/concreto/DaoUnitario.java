@@ -1,6 +1,6 @@
 package dao.concreto;
 
-import acceso.multiobjeto.DAOMultiObjetosGenerica;
+import dao.multiobjeto.DAOMultiObjetosGenerica;
 import modelo.Indicable;
 
 public class DaoUnitario<T, K> {

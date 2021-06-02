@@ -1,8 +1,10 @@
-package acceso.base;
+package acceso.texto;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+
+import acceso.base.IRecuperadorIndexado;
 
 public class RecuperadorIndexadoTexto<String,K> implements IRecuperadorIndexado<String,K> {
 

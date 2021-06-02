@@ -2,14 +2,14 @@ package acceso.fachada;
 
 import java.util.ArrayList;
 
-import acceso.base.GrabadorSerializado;
-import acceso.base.GrabadorTexto;
-import acceso.base.RecuperadorIndexadoSerializado;
-import acceso.base.RecuperadorIndexadoTexto;
-import acceso.multiobjeto.DAOMultiObjetosGenerica;
+import acceso.texto.GrabadorTexto;
+import acceso.texto.RecuperadorIndexadoTexto;
 import conversores.ConversorCancionDTO;
 import dao.concreto.DaoLista;
 import dao.concreto.DaoUnitario;
+import dao.multiobjeto.DAOMultiObjetosGenerica;
+import dao.serializado.GrabadorSerializado;
+import dao.serializado.RecuperadorIndexadoSerializado;
 import modelo.ArticuloDTO;
 import modelo.CancionDTO;
 import modelo.Persona;

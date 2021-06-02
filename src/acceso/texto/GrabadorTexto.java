@@ -1,8 +1,10 @@
-package acceso.base;
+package acceso.texto;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+
+import acceso.base.IGrabador;
 
 public class GrabadorTexto<String> implements IGrabador<String> {
 

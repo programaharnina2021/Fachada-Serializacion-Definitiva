@@ -1,17 +1,19 @@
-package acceso.multiobjeto;
+package dao.multiobjeto;
 
-import acceso.base.DAOGrabador;
 import acceso.base.IGrabador;
 import acceso.base.IRecuperadorIndexado;
-import modelo.Indicable;
 
-public class DAOMultiObjetosGenerica<T , K> extends DAOGrabador<T> {
+public class DAOMultiObjetosGenerica<T , K> {
 	protected final IRecuperadorIndexado<T, K> recuperador;
+	protected final IGrabador<T> grabador;
 	protected boolean add = true;
+	private String path;
 
 	public DAOMultiObjetosGenerica(String path, IGrabador<T> grabador, IRecuperadorIndexado<T, K> recuperado,
 			boolean add) {
-		super(path, grabador);
+		super();
+		this.path=path;
+		this.grabador=grabador;
 		this.recuperador = recuperado;
 		this.add = add;
 	}

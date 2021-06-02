@@ -2,28 +2,31 @@ package acceso.coleccion;
 
 import java.util.Collection;
 
-import acceso.base.DAOGrabador;
-import acceso.base.GrabadorSerializado;
+import acceso.base.IGrabador;
 import acceso.base.IRecuperadorUnitario;
-import acceso.base.RecuperadorUnitarioSerializado;
+import dao.serializado.GrabadorSerializado;
+import dao.serializado.RecuperadorIndexadoSerializado;
+import dao.serializado.RecuperadorUnitarioSerializado;
 
-
-public class DAOCollection<T extends Collection> extends DAOGrabador<T> {
+public class DAOCollection<T extends Collection> {
 	private final IRecuperadorUnitario<T> recuperador;
-	private final boolean add=false;
+	protected IGrabador grabador;
+	protected String path;
+	private final boolean add = false;
 
-	public DAOCollection(String path) {
-		super(path,new GrabadorSerializado<T>());		
-		this.recuperador = new RecuperadorUnitarioSerializado<>();
+	public DAOCollection(String path,IRecuperadorUnitario<T> recuperador,IGrabador grabador) {
+		super();
+		this.path=path;
+		this.grabador = grabador;
+		this.recuperador = recuperador;
 	}
 
-	@Override
 	public boolean graba(T DTO) {
 		return grabador.graba(this.path, DTO, add);
 	}
 
-	public T recupera()  {
-			return recuperador.recupera(this.path);
+	public T recupera() {
+		return recuperador.recupera(this.path);
 	}
 
 }
