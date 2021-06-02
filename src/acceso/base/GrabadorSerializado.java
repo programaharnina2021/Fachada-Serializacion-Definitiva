@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
-public class Grabador<T> implements IGrabador<T> {
+public class GrabadorSerializado<T> implements IGrabador<T> {
 	private boolean estado = false;
 
 	@Override

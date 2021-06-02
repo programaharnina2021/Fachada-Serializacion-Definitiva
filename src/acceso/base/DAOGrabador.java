@@ -5,9 +5,9 @@ public abstract class DAOGrabador<T> {
 	protected IGrabador grabador;
 	protected String path;
 	
-	public DAOGrabador(String path) {
+	public DAOGrabador(String path,IGrabador<T> grabador) {
 		super();
-		this.grabador = new Grabador<>();
+		this.grabador = grabador;
 		this.path = path;
 	}
 

@@ -1,25 +1,28 @@
 package dao.concreto;
 
-import acceso.multiobjeto.DAOMultiObjetos;
+import acceso.multiobjeto.DAOMultiObjetosGenerica;
 import modelo.Indicable;
 
-public class DaoUnitario <T extends Indicable<Comparable>,K>{
+public class DaoUnitario<T, K> {
 	private String path;
-	private DAOMultiObjetos<T, K> daoArchivo;
-	
-	public DaoUnitario(String path) {
+	private DAOMultiObjetosGenerica<T, K> daoArchivo;
+
+	public DaoUnitario(String path,DAOMultiObjetosGenerica<T, K> daoArchivo) {
 		super();
 		this.path = path;
-		daoArchivo=new DAOMultiObjetos<>(path);
+		this.daoArchivo = daoArchivo;
 	}
+
 	public boolean add(T t) {
 		return daoArchivo.graba(t);
 	}
+
 	public T buscar(K k) {
-		return daoArchivo.recupera(k);
+		return (T) daoArchivo.recupera(k);
 	}
+
 	public T get(int posicion) {
-		return daoArchivo.recupera(posicion);
+		return (T) daoArchivo.recupera(posicion);
 	}
 
 }

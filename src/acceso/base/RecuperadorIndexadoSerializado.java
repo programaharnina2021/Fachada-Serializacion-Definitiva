@@ -6,7 +6,7 @@ import java.io.ObjectInputStream;
 
 import modelo.Indicable;
 
-public class RecuperadorIndexado<T extends Indicable, K> implements IRecuperadorIndexado<T, K> {
+public class RecuperadorIndexadoSerializado<T extends Indicable, K> implements IRecuperadorIndexado<T, K> {
 
 	@Override
 	public T recupera(String path, K k) {

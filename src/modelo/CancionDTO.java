@@ -2,7 +2,7 @@ package modelo;
 
 import java.io.Serializable;
 
-public class CancionDTO implements Serializable,Indicable<String>,Convertible<CancionDTO>{
+public class CancionDTO implements Serializable,Indicable<Comparable>{
 	private String titulo;
 	private long duracionEnSegundos;
 	private boolean estrenada;
@@ -24,8 +24,8 @@ public class CancionDTO implements Serializable,Indicable<String>,Convertible<Ca
 	}
 
 	@Override
-	public void setKey(String t) {
-		this.titulo=t;
+	public void setKey(Comparable t) {
+		this.titulo=(String) t;
 		
 	}
 
@@ -71,18 +71,6 @@ public class CancionDTO implements Serializable,Indicable<String>,Convertible<Ca
 
 	public void setEstrenada(boolean estrenada) {
 		this.estrenada = estrenada;
-	}
-
-	@Override
-	public String convertirAString(CancionDTO t) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CancionDTO convertirAObjeto(String string) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }
