@@ -1,14 +1,11 @@
 package dao.concreto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import acceso.coleccion.DAOCollection;
 import dao.serializado.GrabadorSerializado;
-import dao.serializado.RecuperadorIndexadoSerializado;
 import dao.serializado.RecuperadorUnitarioSerializado;
 import modelo.Indicable;
-import modelo.Persona;
 
 public class DaoLista<T extends List, S extends Indicable<Comparable>, K> {
 	private T lista;

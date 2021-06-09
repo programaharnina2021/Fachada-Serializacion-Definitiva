@@ -1,9 +1,7 @@
 package ensayo;
 
 import acceso.fachada.Facade;
-import conversores.ConversorCancionDTO;
-import modelo.ArticuloDTO;
-import modelo.CancionDTO;
+import dao.concreto.DaoLista;
 import modelo.Persona;
 
 public class EnsayoDao {
@@ -11,7 +9,6 @@ public class EnsayoDao {
 		Facade facade=new Facade();
 //		facade.add(new Persona(1, "Fulgencio"));
 		Persona persona = facade.getPersona(0);
-		
 //		facade.add(new ArticuloDTO(1, "tornillaco"));
 //		ArticuloDTO buscarArticuloDTO = facade.buscarArticuloDTO(1);
 //		CancionDTO cancion = new CancionDTO("adios",112, true);

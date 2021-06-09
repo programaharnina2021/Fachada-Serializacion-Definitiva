@@ -3,6 +3,7 @@ package dao.serializado;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 import acceso.base.IGrabador;
 import acceso.base.MyObjectOutputStream;
@@ -16,7 +17,8 @@ public class GrabadorSerializado<T> implements IGrabador<T> {
 		FileOutputStream flujoW;
 		ObjectOutputStream adaptadorW;
 		try {
-			boolean existe=file.exists();
+			boolean existe = file.exists();
+
 			flujoW = new FileOutputStream(file, add);
 			if (add && existe) {
 				adaptadorW = new MyObjectOutputStream(flujoW);

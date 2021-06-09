@@ -4,9 +4,6 @@ import java.util.Collection;
 
 import acceso.base.IGrabador;
 import acceso.base.IRecuperadorUnitario;
-import dao.serializado.GrabadorSerializado;
-import dao.serializado.RecuperadorIndexadoSerializado;
-import dao.serializado.RecuperadorUnitarioSerializado;
 
 public class DAOCollection<T extends Collection> {
 	private final IRecuperadorUnitario<T> recuperador;

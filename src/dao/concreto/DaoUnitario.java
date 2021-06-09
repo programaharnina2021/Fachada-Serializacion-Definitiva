@@ -1,7 +1,6 @@
 package dao.concreto;
 
 import dao.multiobjeto.DAOMultiObjetosGenerica;
-import modelo.Indicable;
 
 public class DaoUnitario<T, K> {
 	private String path;
